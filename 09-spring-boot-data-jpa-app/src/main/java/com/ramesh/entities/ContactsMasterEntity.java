@@ -20,7 +20,7 @@ public class ContactsMasterEntity {
 	private String contactName;
 
 	@Column(name = "CONTACT_NUMBER")
-	private long contactNumber;
+	private Long contactNumber;
 
 	
 		

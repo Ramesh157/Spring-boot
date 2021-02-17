@@ -17,12 +17,12 @@ public interface ContactsMasterRepo extends CrudRepository<ContactsMasterEntity,
 	// this method will generate query like below
 	// select * from contacts_master where contact_name='name' and
 	// contact_number=number;
-	public ContactsMasterEntity findByContactNameAndContactNumber(String name, Long cno);
+	public ContactsMasterEntity findByContactNameAndContactNumber(String name, Long number);
 
-	@Query("slect contactName from ContactMasterEntity")
+	@Query("select contactName from ContactsMasterEntity")
 	public List<String> findAllContacNames();
 
-	@Query("select contactName from ContactMasterEntity  where contactNumber=:num")
+	@Query("select contactName from ContactsMasterEntity  where contactNumber=:num")
 	public String findContactNameByContactNumber(Long num);
 
 	
