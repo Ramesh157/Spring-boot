@@ -23,7 +23,7 @@ public interface ContactsMasterRepo extends CrudRepository<ContactsMasterEntity,
 	public List<String> findAllContacNames();
 
 	@Query("select contactName from ContactsMasterEntity  where contactNumber=:num")
-	public String findContactNameByContactNumber(Long num);
+	public List<String> findContactNameByContactNumber(Long num);
 
 	
 }
